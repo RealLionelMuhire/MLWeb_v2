@@ -2,7 +2,7 @@
 name = "repl_nix_MLWeb"
 version = "0.1.0"
 description = ""
-authors = ["Your Name <you@example.com>"]
+authors = ["Lionel Muhire<muhire@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.10"
