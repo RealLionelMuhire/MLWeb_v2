@@ -1,5 +1,5 @@
 #!/usr/bin/python
-from sqlalchemy import create_engine
+from sqlalchemy import create_engine, text
 
 db_connect_str = "mysql+pymysql://w9947rumlo8lkhsvho06:pscale_pw_iddkxaScHFdWZTCzPeRHCJNtOJHhNq2zUZ6CoAuPWfP@aws.connect.psdb.cloud/ml_career?charset=utf8mb4"
 
@@ -11,3 +11,5 @@ engine = create_engine(
         }
     }
 )
+
+print("DB Connection String:", db_connect_str)
