@@ -1,7 +1,7 @@
 #!/usr/bin/python
 from sqlalchemy import create_engine, text
 
-db_connect_str = "mysql+pymysql://u46f7jz7673tgk7ejewi:pscale_pw_meb5CG2GCsHJH8spxW1PYxV9AWXnQcJJQ5KiZ5IAKGq@aws.connect.psdb.cloud/ml_career?charset=utf8mb4"
+db_connect_str = "mysql+pymysql://cya4oqn277p39qxkdkcb:pscale_pw_5KLbixJYqkmcOXSEuslIOb62gxpfApxTIhgY2dlGZ3Y@aws.connect.psdb.cloud/ml_careers?charset=utf8mb4"
 
 engine = create_engine(
     db_connect_str,
@@ -12,4 +12,6 @@ engine = create_engine(
     }
 )
 
-print("DB Connection String:", db_connect_str)
+with engine.connect() as conn:
+    result = conn.execute(text("select * from jobs"))
+    print(result.all())
