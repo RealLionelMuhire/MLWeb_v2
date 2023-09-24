@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 from sqlalchemy import create_engine, text
 
-db_connect_str = "mysql+pymysql://l0atw3ej02z160cz3s5c:pscale_pw_QJkQPFgBVmSOw5FlVSmkf1GCjEEQeSd38JWuAfJwTN0@aws.connect.psdb.cloud/ml_careers?charset=utf8mb4"
+db_connect_str = "mysql+pymysql://kc1ukk07u0o5x67iaq1z:pscale_pw_iIaSOoDo6MPlSM84SkmJBMhP6zKQldATXdN4Agsi31N@aws.connect.psdb.cloud/ml_careers?charset=utf8mb4"
 
 engine = create_engine(
     db_connect_str,
