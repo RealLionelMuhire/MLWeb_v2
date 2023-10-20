@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 from sqlalchemy import create_engine, text
 
 db_connect_str = "mysql+pymysql://w369rwsxniwcadtxgpt7:pscale_pw_LxqtZbLagHT4GcTy8fr6tjQcHkKi4EJPBQ7sHOl1xeu@aws.connect.psdb.cloud/ml_careers?charset=utf8mb4"
