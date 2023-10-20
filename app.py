@@ -1,17 +1,9 @@
 #!/usr/bin/python3
 from flask import Flask, render_template, jsonify
-from database import engine
-from sqlalchemy import text
+from database import load_jobs_from_db
 
 app = Flask(__name__)
 
-def load_jobs_from_db():
-  with engine.connect() as conn:
-    result = conn.execute(text("select * from jobs"))
-    jobs = []
-    for row in result.all():
-      jobs.append({column: getattr(row, column) for column in result.keys()})
-    return jobs
 
 @app.route("/")
 def hello_world():
@@ -20,9 +12,10 @@ def hello_world():
                          company_name="ML Careers (Learning Purpose version)")
 
 
-@app.route("/jobs")
+@app.route("/api/jobs")
 def list_jobs():
-  return jsonify(JOBS)
+  jobs = load_jobs_from_db()
+  return jsonify(jobs)
 
 
 if __name__ == "__main__":
