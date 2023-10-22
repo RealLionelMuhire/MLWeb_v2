@@ -34,3 +34,5 @@ def load_job_from_db(id):
             return None
         else:
             return dict(rows[0])
+
+print(load_jobs_from_db())
