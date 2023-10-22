@@ -1,9 +1,20 @@
 #!/usr/bin/python3
-import os
+from flask import Flask, jsonify
 
-db_connect_str = os.environ.get("DB_CONNECTION_STRING")
-if db_connect_str:
-    print("DB_CONNECTION_STRING is set:", db_connect_str)
-else:
-    print("DB_CONNECTION_STRING is not set or is set to None.")
+app = Flask(__name__)
+
+# Sample data as a Python dictionary
+sample_data = {
+    "name": "John Doe",
+    "email": "john@example.com",
+    "age": 30
+}
+
+@app.route('/test_jsonify')
+def test_jsonify():
+    # Use jsonify to convert the Python dictionary to a JSON response
+    return jsonify(sample_data)
+
+if __name__ == '__main__':
+    app.run(debug=True)
 

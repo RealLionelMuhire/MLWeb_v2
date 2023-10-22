@@ -1,7 +1,7 @@
 database: ml_careers
-username: t5cdhbwqw86ol2eilj51
+username: ktf4hf2m2lat9v79vlp1
 host: aws.connect.psdb.cloud
-password: pscale_pw_FOV3UqvnDnctRt68gSwL8LYnnBemJroopFO7XxIAQLw
+password: pscale_pw_oLc2s8K1wsZNK2606d3lQPjRRg4BpBtaS9CIvV5LZQD
  
  
 
@@ -9,5 +9,5 @@ password: pscale_pw_FOV3UqvnDnctRt68gSwL8LYnnBemJroopFO7XxIAQLw
 
 
 
-export DB_CONNECTION_STRING="mysql+pymysql://t5cdhbwqw86ol2eilj51:pscale_pw_FOV3UqvnDnctRt68gSwL8LYnnBemJroopFO7XxIAQLw@aws.connect.psdb.cloud/ml_careers?charset=utf8mb4"
+export DB_CONNECTION_STRING="mysql+pymysql://ktf4hf2m2lat9v79vlp1:pscale_pw_oLc2s8K1wsZNK2606d3lQPjRRg4BpBtaS9CIvV5LZQD@aws.connect.psdb.cloud/ml_careers?charset=utf8mb4"
 
